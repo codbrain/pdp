@@ -349,6 +349,28 @@ Redux::setSection($opt_name, array(
 
 	)
 ));
+Redux::setSection($opt_name, array(
+	'title'            => __('Footer Contact', 'redux-framework-demo'),
+	'desc'             => __('For full documentation on this field, visit: ', 'redux-framework-demo') . '<a href="//docs.reduxframework.com/core/fields/text/" target="_blank">docs.reduxframework.com/core/fields/text/</a>',
+	'id'               => 'footer-contact',
+	'subsection'       => true,
+	'customizer_width' => '700px',
+	'fields'           => array(
+		array(
+			'id'       => 'footer-title',
+			'type'     => 'text',
+			'title'    => __('Footer Title', 'redux-framework-demo'),
+			'default'  => '',
+		),
+		array(
+			'id'       => 'footer-text',
+			'type'     => 'textarea',
+			'title'    => __('Footer Text', 'redux-framework-demo'),
+			'default'  => '',
+		),
+
+	)
+));
 
 if (class_exists('Redux_Pro')) {
 	require_once Redux_Core::$dir . '../sample/sections/extensions/color-scheme.php';

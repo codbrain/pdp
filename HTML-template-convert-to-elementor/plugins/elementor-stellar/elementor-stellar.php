@@ -31,8 +31,12 @@ function register_stellar_widget($widgets_manager)
 
     require_once(__DIR__ . '/widgets/about-widget.php');
     require_once(__DIR__ . '/widgets/services-widget.php');
+    require_once(__DIR__ . '/widgets/counter-widget.php');
+    require_once(__DIR__ . '/widgets/cta-widget.php');
 
     $widgets_manager->register(new \Elementor_About_Widget());
     $widgets_manager->register(new \Elementor_Services_Widget());
+    $widgets_manager->register(new \Elementor_Counter_Widget());
+    $widgets_manager->register(new \Elementor_Cta_Widget());
 }
 add_action('elementor/widgets/register', 'register_stellar_widget');
