@@ -39,7 +39,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
   // Timer
 
-  const deadline = "2022-06-11";
+  const deadline = "2024-06-11";
 
   function getTimeRemaining(endtime) {
     const t = Date.parse(endtime) - Date.parse(new Date()),
@@ -126,7 +126,6 @@ window.addEventListener("DOMContentLoaded", function () {
   });
 
   const modalTimerId = setTimeout(openModal, 300000);
-  // Изменил значение, чтобы не отвлекало
 
   function showModalByScroll() {
     if (
@@ -139,7 +138,7 @@ window.addEventListener("DOMContentLoaded", function () {
   }
   window.addEventListener("scroll", showModalByScroll);
 
-  // Используем классы для создание карточек меню
+  // Class card menu
 
   class MenuCard {
     constructor(src, alt, title, descr, price, parentSelector, ...classes) {
