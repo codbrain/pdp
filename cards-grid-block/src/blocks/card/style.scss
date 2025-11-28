@@ -1,0 +1,30 @@
+.card-item {
+    min-height: 300px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    
+    .card-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 30px;
+        background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+        color: white;
+        width: 100%;
+        box-sizing: border-box;
+        
+        .card-title {
+            margin: 0 0 10px 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .card-text {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    }
+}

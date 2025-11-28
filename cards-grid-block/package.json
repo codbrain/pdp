@@ -1,0 +1,18 @@
+{
+    "name": "cards-grid-block",
+    "version": "1.0.0",
+    "description": "Block with adaptive card grid",
+    "scripts": {
+      "build": "wp-scripts build",
+      "start": "wp-scripts start"
+    },
+    "dependencies": {
+      "@wordpress/block-editor": "^12.0.0",
+      "@wordpress/blocks": "^13.0.0",
+      "@wordpress/components": "^28.0.0",
+      "@wordpress/element": "^6.0.0"
+    },
+    "devDependencies": {
+      "@wordpress/scripts": "^27.0.0"
+    }
+  }
