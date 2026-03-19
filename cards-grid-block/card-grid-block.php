@@ -27,6 +27,7 @@ function cards_grid_block_editor_assets() {
 }
 add_action('enqueue_block_editor_assets', 'cards_grid_block_editor_assets');
 
+
 function cards_grid_block_front_assets() {
 	wp_enqueue_style(
 		'cards-grid-block-style',
@@ -34,13 +35,22 @@ function cards_grid_block_front_assets() {
 		array(),
 		filemtime(plugin_dir_path(__FILE__) . 'build/style-index.css')
 	);
+
+	wp_enqueue_script(
+		'cards-grid-block-masonry',
+		plugin_dir_url(__FILE__) . 'js/masonry.js',
+		array(),
+		filemtime(plugin_dir_path(__FILE__) . 'js/masonry.js'),
+		true
+	);
 }
 add_action('enqueue_block_assets', 'cards_grid_block_front_assets');
 
 
+
 function cards_grid_block_register_patterns() {
 	if (!function_exists('register_block_pattern')) {
-		return; // old WP version
+		return;
 	}
 
 
