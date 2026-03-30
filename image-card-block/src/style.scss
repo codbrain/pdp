@@ -1,0 +1,33 @@
+.image-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 16px;
+    background: #fff;
+}
+
+.image-card__media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.image-card__title {
+    margin: 0 0 8px;
+}
+
+.image-card__text {
+    margin: 0 0 12px;
+    color: #4b5563;
+}
+
+.image-card__button {
+    display: inline-block;
+    padding: 8px 14px;
+    background: #111827;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+}

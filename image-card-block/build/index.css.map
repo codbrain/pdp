@@ -1,0 +1,1 @@
+{"version":3,"file":"index.css","mappings":";;;AAAA;EACI;AACJ,C","sources":["webpack://image-card-block/./src/editor.scss"],"sourcesContent":[".image-card {\r\n    outline: 1px dashed #d1d5db;\r\n}\r\n"],"names":[],"sourceRoot":""}

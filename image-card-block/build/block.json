@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "image-card/block",
+  "version": "1.0.0",
+  "title": "Image Card",
+  "category": "design",
+  "icon": "format-image",
+  "description": "Card with image, title, text and button.",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "imageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "imageAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "title": {
+      "type": "string",
+      "default": "Card title"
+    },
+    "text": {
+      "type": "string",
+      "default": "Card text"
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Read more"
+    },
+    "buttonUrl": {
+      "type": "string",
+      "default": "#"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
