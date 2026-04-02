@@ -8,7 +8,15 @@
   "icon": "format-image",
   "description": "Card with image, title, text and button.",
   "supports": {
-    "html": false
+    "html": false,
+    "spacing": {
+      "padding": true,
+      "margin": true,
+      "__experimentalDefaultControls": {
+        "padding": true,
+        "margin": false
+      }
+    }
   },
   "attributes": {
     "imageUrl": {

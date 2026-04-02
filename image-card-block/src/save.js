@@ -2,9 +2,12 @@ import { useBlockProps, RichText } from '@wordpress/block-editor';
 
 export default function save({ attributes }) {
     const { imageUrl, imageAlt, title, text, buttonText, buttonUrl } = attributes;
+    const blockProps = useBlockProps.save({
+        className: 'image-card',
+    });
 
     return (
-        <div {...useBlockProps.save({ className: 'image-card' })}>
+        <div {...blockProps}>
             {imageUrl && (
                 <div className="image-card__media">
                     <img src={imageUrl} alt={imageAlt} />

@@ -1,10 +1,10 @@
 import { __ } from '@wordpress/i18n';
 import {
-    useBlockProps,
-    RichText,
+    InspectorControls,
     MediaUpload,
     MediaUploadCheck,
-    InspectorControls,
+    RichText,
+    useBlockProps,
 } from '@wordpress/block-editor';
 import { Button, PanelBody, TextControl } from '@wordpress/components';
 
@@ -15,7 +15,7 @@ export default function Edit({ attributes, setAttributes }) {
     return (
         <>
             <InspectorControls>
-                <PanelBody title={__('Card settings', 'image-card-block')}>
+                <PanelBody title={__('Card settings', 'image-card-block')} initialOpen>
                     <TextControl
                         label={__('Button text', 'image-card-block')}
                         value={buttonText}
@@ -27,7 +27,7 @@ export default function Edit({ attributes, setAttributes }) {
                         onChange={(value) => setAttributes({ buttonUrl: value })}
                     />
                     <TextControl
-                        label={__('Image ALT', 'image-card-block')}
+                        label={__('Image alt text', 'image-card-block')}
                         value={imageAlt}
                         onChange={(value) => setAttributes({ imageAlt: value })}
                     />
@@ -41,7 +41,7 @@ export default function Edit({ attributes, setAttributes }) {
                             onSelect={(media) =>
                                 setAttributes({
                                     imageUrl: media?.url || '',
-                                    imageAlt: media?.alt || '',
+                                    imageAlt: media?.alt || imageAlt || '',
                                 })
                             }
                             allowedTypes={['image']}
@@ -64,7 +64,7 @@ export default function Edit({ attributes, setAttributes }) {
                     className="image-card__title"
                     value={title}
                     onChange={(value) => setAttributes({ title: value })}
-                    placeholder={__('Card title...', 'image-card-block')}
+                    placeholder={__('Card title…', 'image-card-block')}
                 />
 
                 <RichText
@@ -72,12 +72,10 @@ export default function Edit({ attributes, setAttributes }) {
                     className="image-card__text"
                     value={text}
                     onChange={(value) => setAttributes({ text: value })}
-                    placeholder={__('Card text...', 'image-card-block')}
+                    placeholder={__('Card text…', 'image-card-block')}
                 />
 
-                {buttonText && (
-                    <span className="image-card__button">{buttonText}</span>
-                )}
+                {buttonText && <span className="image-card__button">{buttonText}</span>}
             </div>
         </>
     );
